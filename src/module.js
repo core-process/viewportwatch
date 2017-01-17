@@ -89,6 +89,7 @@ let dimensions
 window.addEventListener('scroll', onPotentialResize);
 window.addEventListener('resize', onPotentialResize);
 window.addEventListener('orientationchange', onPotentialResize);
+window.addEventListener('load', onPotentialResize);
 
 // handle potential resize event
 import deepEqual from 'deep-equal';
