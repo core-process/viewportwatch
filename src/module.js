@@ -40,8 +40,8 @@ if(isMobile) {
             oh = window.outerHeight;
       addWidth(ow, iw);
       addHeight(oh, ih);
-      const ws = widths.get(ow).values(),
-            hs = heights.get(oh).values();
+      const ws = Array.from(widths.get(ow).values()),
+            hs = Array.from(heights.get(oh).values());
       return Object.freeze({
         current: Object.freeze({
           width: iw,
