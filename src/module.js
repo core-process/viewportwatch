@@ -82,7 +82,7 @@ else {
 
 // current detected dimensions
 let dimensions
-  = window.viewportwatch.dimenstions
+  = window.viewportwatch.dimensions
   = calculateDimensions();
 
 // setup event handler
@@ -101,7 +101,7 @@ function onPotentialResize() {
   }
 
   dimensions
-    = window.viewportwatch.dimenstions
+    = window.viewportwatch.dimensions
     = newDimensions;
 
   // dispatch event
