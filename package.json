@@ -1,0 +1,31 @@
+{
+  "name": "viewportwatch",
+  "version": "1.0.10",
+  "description": "Watches viewport dimensions in a mobile compatible way.",
+  "main": "build/module.js",
+  "scripts": {
+    "build": "babel src --out-dir build --source-maps --copy-files",
+    "build-watch": "babel src --out-dir build --source-maps --copy-files --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/core-process/viewportwatch.git"
+  },
+  "author": "Niklas Salmoukas <niklas@salmoukas.com>",
+  "license": "SEE LICENSE IN license.md",
+  "bugs": {
+    "url": "https://github.com/core-process/viewportwatch/issues"
+  },
+  "homepage": "https://github.com/core-process/viewportwatch#readme",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0"
+  },
+  "peerDependencies": {
+    "babel-runtime": "^6.18.0"
+  }
+}
