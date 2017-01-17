@@ -62,7 +62,7 @@ if(isMobile) {
 else {
   calculateDimensions = () => {
     const iw = window.innerWidth,
-          ow = window.outerWidth;
+          ih = window.innerHeight;
     return Object.freeze({
       current: Object.freeze({
         width: iw,
