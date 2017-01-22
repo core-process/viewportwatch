@@ -1,8 +1,3 @@
-// global viewportwatch object
-window.viewportwatch = {
-  dimensions: null,
-};
-
 // detect mobile
 import MobileDetect from 'mobile-detect';
 const isMobile = !!(new MobileDetect(window.navigator.userAgent)).mobile();
@@ -80,20 +75,11 @@ else {
   };
 }
 
-// current detected dimensions
-let dimensions
-  = window.viewportwatch.dimensions
-  = calculateDimensions();
-
-// setup event handler
-window.addEventListener('scroll', onPotentialResize);
-window.addEventListener('resize', onPotentialResize);
-window.addEventListener('orientationchange', onPotentialResize);
-window.addEventListener('DOMContentLoaded', onPotentialResize);
-window.addEventListener('load', onPotentialResize);
-
-// handle potential resize event
+// handle resize event
 import deepEqual from 'deep-equal';
+
+let _dimensions = calculateDimensions();
+const _emitter = require('event-emitter')({});
 
 function onPotentialResize() {
   // get new dimensions and check for changes
@@ -102,12 +88,34 @@ function onPotentialResize() {
     return;
   }
 
-  dimensions
-    = window.viewportwatch.dimensions
-    = newDimensions;
-
-  // dispatch event
-  const event = document.createEvent('CustomEvent');
-  event.initCustomEvent('viewportwatch:resize', true, true, dimensions);
-  window.dispatchEvent(event);
+  // store new dimensions and dispatch event
+  _dimensions = newDimensions;
+  _emitter.emit('resize', _dimensions);
 }
+
+// setup event handler
+if(isMobile) {
+  window.addEventListener('scroll', onPotentialResize);
+}
+window.addEventListener('resize', onPotentialResize);
+window.addEventListener('orientationchange', onPotentialResize);
+window.addEventListener('DOMContentLoaded', onPotentialResize);
+window.addEventListener('load', onPotentialResize);
+
+// public interface
+const interface = {
+  dimensions() {
+    return _dimensions;
+  },
+  on(...args) {
+    return _emitter.on(...args);
+  },
+  off(...args) {
+    return _emitter.on(...args);
+  },
+  once(...args) {
+    return _emitter.on(...args);
+  }
+};
+
+export { interface as default };
