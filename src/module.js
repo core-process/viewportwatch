@@ -103,7 +103,7 @@ window.addEventListener('DOMContentLoaded', onPotentialResize);
 window.addEventListener('load', onPotentialResize);
 
 // public interface
-const interface = {
+const pub = {
   dimensions() {
     return _dimensions;
   },
@@ -118,4 +118,4 @@ const interface = {
   }
 };
 
-export { interface as default };
+export { pub as default };
