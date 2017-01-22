@@ -38,7 +38,7 @@ vw.dimensions()
     }
 ```
 
-On mobile devices the values for `current`, `maximum` and `minimum` will differ. On desktop devices they are equal by definition.
+On mobile devices, the values for `current`, `maximum` and `minimum` will differ. On desktop devices, they are equal by definition.
 
 ### React to changes in viewport dimensions
 
