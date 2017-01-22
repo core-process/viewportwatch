@@ -26,7 +26,7 @@ yarn add viewportwatch
 
 ### Retrieve the current dimensions
 
-The `current`, `maximum` and `minimum` dimensions can be retrieved via the `dimensions()` function.
+The `current`, `maximum` and `minimum` dimensions can be retrieved via the `dimensions()` method.
 
 ```js
 import vw from 'viewportwatch';
@@ -42,7 +42,7 @@ On mobile the values for `current`, `maximum` and `minimum` will differ. On desk
 
 ### React to changes in viewport dimensions
 
-The library emits a `resize` event on viewport changes. You can install and remove event handles via the functions `on`, `off` and `once`.
+The library emits a `resize` event on viewport changes. You can install and remove event handler via the methods `on`, `off` and `once`.
 
 ```js
 import vw from 'viewportwatch';
