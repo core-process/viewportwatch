@@ -4,9 +4,9 @@ Watches viewport dimensions in a mobile device compatible way.
 
 ![npm downloads total](https://img.shields.io/npm/dt/viewportwatch.svg) ![npm version](https://img.shields.io/npm/v/viewportwatch.svg) ![npm license](https://img.shields.io/npm/l/viewportwatch.svg)
 
-The inner height of a mobile browser window might change while performing scroll operations. This odd behavior is caused by the address bar, which the browser displays or hides as it pleases him. If one or more styles depends on the height of the window, the page starts to appear 'jumpy' and the user experience goes down the drain.
+The inner height of a mobile browser window might change while performing scroll operations. The address bar causes this odd behavior because the browser displays or hides the address bar as it pleases him. If one or more styles depends on the height of the window, the page starts to appear 'jumpy,' and the user experience goes down the drain.
 
-This library watches the viewport for changes in its dimensions. For mobile devices it associates the viewport dimensions with the corresponding screen dimensions and derives minimum and maximum values. These can be used e.g. to calculate the height of elements and avoid 'jumpy' behavior while scrolling.
+This library watches the viewport for changes in its dimensions. For mobile devices, it associates the viewport dimensions with the corresponding screen sizes and derives minimum and maximum values. These can be used e.g. to calculate the height of elements and avoid 'jumpy' behavior while scrolling.
 
 ## Installation
 
