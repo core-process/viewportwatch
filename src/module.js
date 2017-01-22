@@ -84,7 +84,7 @@ const _emitter = require('event-emitter')({});
 function onPotentialResize() {
   // get new dimensions and check for changes
   const newDimensions = calculateDimensions();
-  if(deepEqual(newDimensions, dimensions)) {
+  if(deepEqual(newDimensions, _dimensions)) {
     return;
   }
 
