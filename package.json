@@ -1,6 +1,6 @@
 {
   "name": "viewportwatch",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Watches viewport dimensions in a mobile device compatible way.",
   "main": "build/module.js",
   "scripts": {
