@@ -111,10 +111,10 @@ const pub = {
     return _emitter.on(...args);
   },
   off(...args) {
-    return _emitter.on(...args);
+    return _emitter.off(...args);
   },
   once(...args) {
-    return _emitter.on(...args);
+    return _emitter.once(...args);
   }
 };
 
