@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/core-process/viewportwatch.git"
+    "url": "git+https://github.com/coreprocess/viewportwatch.git"
   },
   "author": "Niklas Salmoukas <niklas@salmoukas.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/core-process/viewportwatch/issues"
+    "url": "https://github.com/coreprocess/viewportwatch/issues"
   },
-  "homepage": "https://github.com/core-process/viewportwatch#readme",
+  "homepage": "https://github.com/coreprocess/viewportwatch#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
